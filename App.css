@@ -2,6 +2,20 @@
   text-align: center;
 }
 
+body { 
+  font-family: 'nanumsquare';
+}
+
+.black-nav { 
+  background: black;
+  width: 100%;
+  display: flex;
+  color: white;
+  padding: 20px;
+  font-weight: 600;
+  font-size: 20px;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -36,3 +50,49 @@
     transform: rotate(360deg);
   }
 }
+
+.Book-container { 
+  margin: 0 auto;
+  width: 80%;
+  border: 1px solid #333;
+  padding: 10px 0 30px 0;
+  border-radius: 5px;
+  margin-bottom: 50px;
+}
+
+.subject1 {
+  text-align: left;
+}
+
+.subject2,.subject3 {
+  text-align: center;
+}
+
+.submit-btn {
+  background-color:aquamarine;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.title-input{ 
+  text-align: center;
+  margin:auto;
+  width:300px;
+  height:20px;
+  border: 1px solid #333;
+  position:absolute;
+  
+}
+
+.form-wrapper {
+  text-align: center;
+  margin:0 auto;
+  position: absolute;
+
+}
+/*.text-area {
+  text-align: center;
+  border: 1px solid #333;
+  
+  
+}*/

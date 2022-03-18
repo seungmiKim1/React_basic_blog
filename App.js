@@ -5,6 +5,8 @@ import logo from './logo.svg';
 import './App.css';
 import { Link } from 'react-router-dom';
 import ReactDOM from 'react-dom';
+import { CKEditor } from '@ckeditor/ckeditor5-react';
+import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 
 
 
@@ -62,8 +64,48 @@ function App() {
       <p>2022년 2월 14일 발행</p>
       <hr/>  
     </div>
-  </div>
-    
+
+    <div className="subject1">
+      <h2><i>Today's Book Review</i></h2>
+      <div className='Book-container'>
+        <h1 className="subject2">제목</h1>
+        <div className="subject3">
+        내용
+        </div>
+    </div>
+    <div className='form-wrapper'>
+      <input className="title-input" type="text" placeholder='제목을 입력해주세요'/>
+    </div>
+    {/*<div className='content-wrapper'>
+          <textarea className='text-area' placeholder='내용을 입력해주세요'></textarea>
+    </div>*/}         
+    <button className='submit-btn'>입력</button>
+    </div>
+
+    <div className="App">
+                <h2>Write your story ! </h2>
+                <CKEditor
+                    editor={ ClassicEditor }
+                    data="<p>How was your day?</p>"
+                    onReady={ editor => {
+                        // You can store the "editor" and use when it is needed.
+                        console.log( 'Editor is ready to use!', editor );
+                    } }
+                    onChange={ ( event, editor ) => {
+                        const data = editor.getData();
+                        console.log( { event, editor, data } );
+                    } }
+                    onBlur={ ( event, editor ) => {
+                        console.log( 'Blur.', editor );
+                    } }
+                    onFocus={ ( event, editor ) => {
+                        console.log( 'Focus.', editor );
+                    } }
+                />
+            </div>
+ 
+                    </div>
+   
 
   );
 }
